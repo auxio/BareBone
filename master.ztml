@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sentora &gt; <# ui_tpl_username #> - <# ui_tpl_domainname #></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Stylesheets -->
+        <link href="<# ui_tpl_assetfolderpath #>global-css/bootstrap.min.css" rel="stylesheet">
+        <link href="<# ui_tpl_csspath #>" rel="stylesheet" type="text/css">
+
+        <script src="<# ui_tpl_assetfolderpath #>js/jquery.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/jquery.cookie.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/jquery.sortable-custom.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/spin.min.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/sentora.js"></script>
+
+    </head>
+    <body>
+        <!-- BEGIN ZLOADER PROGRESSBAR DIV -->
+        <div class="zloader_overlay" id="zloader_overlay" style="display:none;"></div>
+        <div class="zloader" id="zloader" style="display:none;">
+            <div class="zloader_content" id="zloader_content"></div>
+        </div>
+        <!-- END ZLOADER PROGRESSBAR DIV -->
+		
+		
+		<!-- Dryden UI -->
+		<# ui_tpl_domainname #><!-- outputs domain from Sentora install like: "sentora.domain.com" -->
+		<# ui_tpl_csspath #><!-- outputs path to theme css file like: "etc/styles/BareBone/global-css/bootstrap.min.css" -->
+		<# ui_tpl_assetfolderpath #> <!-- outputs folderpath to theme folder like: "etc/styles/BareBone/" -->
+		<# ui_tpl_breadcrumbs #><!-- outputs breadcrumb (Home / Account Information / Theme Changer) like: "<ul class="breadcrumb">  <li><a href=".">Home</a></li>  <li><a href="./#account-information">Account Information</a></li>  <li class="active">My Account</li></ul>" -->
+		<# ui_tpl_modulelistznavbar #><!-- outputs top navigation list like: "<li><a href="#" class="nav-stat-button" title="View Account Info" data-toggle="collapse" data-target="#stats-data"><i class="icon-chart-bar-2"></i></a></li> <li class="active"><a href=".">Home</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">File <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="?module=ELFileManager"><i class="icon-elfilemanager greyscale"><img src="/modules/ELFileManager/assets/icon.png" height="16px" width="16px"></i> ELFileManager</a></li><li><a href="?module=ftp_management"><i class="icon-ftp-management"></i> FTP Accounts</a></li><li><a href="?module=pydio"><i class="icon-pydio greyscale"><img src="/modules/pydio/assets/icon.png" height="16px" width="16px"></i> Pydio</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Reseller <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="?module=client_notices"><i class="icon-client-notices"></i> Client Notice Manager</a></li><li><a href="?module=manage_clients"><i class="icon-manage-clients"></i> Manage Clients</a></li><li><a href="?module=manage_groups"><i class="icon-manage-groups"></i> Manage Groups</a></li><li><a href="?module=packages"><i class="icon-packages"></i> Package Manager</a></li><li><a href="?module=theme_manager"><i class="icon-theme-manager"></i> Theme Manager</a></li><li><a href="?module=xbilling"><i class="icon-xbilling greyscale"><img src="/modules/xbilling/assets/icon.png" height="16px" width="16px"></i> xBilling</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Mail <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="?module=aliases"><i class="icon-aliases"></i> Aliases</a></li><li><a href="?module=distlists"><i class="icon-distlists"></i> Distribution Lists</a></li><li><a href="?module=forwarders"><i class="icon-forwarders"></i> Forwards</a></li><li><a href="?module=mailboxes"><i class="icon-mailboxes"></i> Mailboxes</a></li><li><a href="?module=webmail"><i class="icon-webmail"></i> WebMail</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Domain <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="?module=dns_manager"><i class="icon-dns-manager"></i> DNS Manager</a></li><li><a href="?module=domains"><i class="icon-domains"></i> Domains</a></li><li><a href="?module=parked_domains"><i class="icon-parked-domains"></i> Parked Domains</a></li><li><a href="?module=sub_domains"><i class="icon-sub-domains"></i> Sub Domains</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Database <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="?module=mysql_databases"><i class="icon-mysql-databases"></i> MySQL Database</a></li><li><a href="?module=mysql_users"><i class="icon-mysql-users"></i> MySQL Users</a></li><li><a href="?module=phpmyadmin"><i class="icon-phpmyadmin"></i> phpMyAdmin</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Advanced <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="?module=backupmgr"><i class="icon-backupmgr"></i> Backup</a></li><li><a href="?module=cron"><i class="icon-cron"></i> Cron Manager</a></li><li><a href="?module=faqs"><i class="icon-faqs"></i> FAQ's</a></li><li><a href="?module=protected_directories"><i class="icon-protected-directories"></i> Protected Directories</a></li><li><a href="?module=sentastico"><i class="icon-sentastico greyscale"><img src="/modules/sentastico/assets/icon.png" height="16px" width="16px"></i> Sentastico</a></li><li><a href="?module=services"><i class="icon-services"></i> Service Status</a></li><li><a href="?module=user_logviewer"><i class="icon-user-logviewer greyscale"><img src="/modules/user_logviewer/assets/icon.png" height="16px" width="16px"></i> View Logs</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="?module=cpuraminfo"><i class="icon-cpuraminfo greyscale"><img src="/modules/cpuraminfo/assets/icon.png" height="16px" width="16px"></i> CPU/RAM Info</a></li><li><a href="?module=deleted_records_manager"><i class="icon-deleted-records-manager greyscale"><img src="/modules/deleted_records_manager/assets/icon.png" height="16px" width="16px"></i> Deleted Records Manager</a></li><li><a href="?module=gatekeeper"><i class="icon-gatekeeper greyscale"><img src="/modules/gatekeeper/assets/icon.png" height="16px" width="16px"></i> Gate Keeper</a></li><li><a href="?module=manage_categories"><i class="icon-manage-categories greyscale"><img src="/modules/manage_categories/assets/icon.png" height="16px" width="16px"></i> Manage Categories</a></li><li><a href="?module=moduleadmin"><i class="icon-moduleadmin"></i> Module Admin</a></li><li><a href="?module=module_updates"><i class="icon-module-updates greyscale"><img src="/modules/module_updates/assets/icon.png" height="16px" width="16px"></i> Module Updates</a></li><li><a href="?module=phpinfo"><i class="icon-phpinfo"></i> PHPInfo</a></li><li><a href="?module=phpsysinfo"><i class="icon-phpsysinfo"></i> phpSysInfo</a></li><li><a href="?module=sentoraconfig"><i class="icon-sentoraconfig"></i> Sentora Config</a></li><li><a href="?module=news"><i class="icon-news"></i> Sentora News</a></li><li><a href="?module=shadowing"><i class="icon-shadowing"></i> Shadowing</a></li><li><a href="?module=Theme_installer"><i class="icon-theme-installer greyscale"><img src="/modules/Theme_installer/assets/icon.png" height="16px" width="16px"></i> Theme Installer</a></li><li><a href="?module=theme_manager_x"><i class="icon-theme-manager-x greyscale"><img src="/modules/theme_manager_x/assets/icon.png" height="16px" width="16px"></i> Theme Manager X</a></li><li><a href="?module=updates"><i class="icon-updates"></i> Updates</a></li><li><a href="?module=zgodx"><i class="icon-zgodx greyscale"><img src="/modules/zgodx/assets/icon.png" height="16px" width="16px"></i> zGodX</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://www.gravatar.com/avatar/436274d8827181499abe4a2bfadc5c36?s=22&d=mm&r=g" /> Account <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="?module=password_assistant"><i class="icon-password-assistant"></i> Change Password</a></li><li><a href="?module=my_account"><i class="icon-my-account"></i> My Account</a></li><li><a href="?module=theme_changer"><i class="icon-theme-changer greyscale"><img src="/modules/theme_changer/assets/icon.png" height="16px" width="16px"></i> Theme Changer</a></li><li><a href="?module=usage_viewer"><i class="icon-usage-viewer"></i> Usage Viewer</a></li><li><a href="?logout"><i class="icon-phpinfo"></i> Logout</a></li></ul></li>" -->
+		<# ui_tpl_modulelistzsidebar #><!-- outputs side navigation list like: "<li><div class="heading">Account Information <span class="open">+</span></div><ul><li><a href="?module=password_assistant"><i class="icon-password-assistant"></i> Change Password</a></li><li><a href="?module=my_account"><i class="icon-my-account"></i> My Account</a></li><li><a href="?module=theme_changer"><i class="icon-theme-changer greyscale transparent"><img src="/modules/theme_changer/assets/icon.png" height="16px" width="16px"></i> Theme Changer</a></li><li><a href="?module=usage_viewer"><i class="icon-usage-viewer"></i> Usage Viewer</a></li></ul></li><li><div class="heading">Server Admin <span class="open">+</span></div><ul><li><a href="?module=cpuraminfo"><i class="icon-cpuraminfo greyscale transparent"><img src="/modules/cpuraminfo/assets/icon.png" height="16px" width="16px"></i> CPU/RAM Info</a></li><li><a href="?module=deleted_records_manager"><i class="icon-deleted-records-manager greyscale transparent"><img src="/modules/deleted_records_manager/assets/icon.png" height="16px" width="16px"></i> Deleted Records Manager</a></li><li><a href="?module=gatekeeper"><i class="icon-gatekeeper greyscale transparent"><img src="/modules/gatekeeper/assets/icon.png" height="16px" width="16px"></i> Gate Keeper</a></li><li><a href="?module=manage_categories"><i class="icon-manage-categories greyscale transparent"><img src="/modules/manage_categories/assets/icon.png" height="16px" width="16px"></i> Manage Categories</a></li><li><a href="?module=moduleadmin"><i class="icon-moduleadmin"></i> Module Admin</a></li><li><a href="?module=module_updates"><i class="icon-module-updates greyscale transparent"><img src="/modules/module_updates/assets/icon.png" height="16px" width="16px"></i> Module Updates</a></li><li><a href="?module=phpinfo"><i class="icon-phpinfo"></i> PHPInfo</a></li><li><a href="?module=phpsysinfo"><i class="icon-phpsysinfo"></i> phpSysInfo</a></li><li><a href="?module=sentoraconfig"><i class="icon-sentoraconfig"></i> Sentora Config</a></li><li><a href="?module=news"><i class="icon-news"></i> Sentora News</a></li><li><a href="?module=shadowing"><i class="icon-shadowing"></i> Shadowing</a></li><li><a href="?module=Theme_installer"><i class="icon-theme-installer greyscale transparent"><img src="/modules/Theme_installer/assets/icon.png" height="16px" width="16px"></i> Theme Installer</a></li><li><a href="?module=theme_manager_x"><i class="icon-theme-manager-x greyscale transparent"><img src="/modules/theme_manager_x/assets/icon.png" height="16px" width="16px"></i> Theme Manager X</a></li><li><a href="?module=updates"><i class="icon-updates"></i> Updates</a></li><li><a href="?module=zgodx"><i class="icon-zgodx greyscale transparent"><img src="/modules/zgodx/assets/icon.png" height="16px" width="16px"></i> zGodX</a></li></ul></li><li><div class="heading">Advanced <span class="open">+</span></div><ul><li><a href="?module=backupmgr"><i class="icon-backupmgr"></i> Backup</a></li><li><a href="?module=cron"><i class="icon-cron"></i> Cron Manager</a></li><li><a href="?module=faqs"><i class="icon-faqs"></i> FAQ's</a></li><li><a href="?module=protected_directories"><i class="icon-protected-directories"></i> Protected Directories</a></li><li><a href="?module=sentastico"><i class="icon-sentastico greyscale transparent"><img src="/modules/sentastico/assets/icon.png" height="16px" width="16px"></i> Sentastico</a></li><li><a href="?module=services"><i class="icon-services"></i> Service Status</a></li><li><a href="?module=user_logviewer"><i class="icon-user-logviewer greyscale transparent"><img src="/modules/user_logviewer/assets/icon.png" height="16px" width="16px"></i> View Logs</a></li></ul></li><li><div class="heading">Database Management <span class="open">+</span></div><ul><li><a href="?module=mysql_databases"><i class="icon-mysql-databases"></i> MySQL Database</a></li><li><a href="?module=mysql_users"><i class="icon-mysql-users"></i> MySQL Users</a></li><li><a href="?module=phpmyadmin"><i class="icon-phpmyadmin"></i> phpMyAdmin</a></li></ul></li><li><div class="heading">Domain Management <span class="open">+</span></div><ul><li><a href="?module=dns_manager"><i class="icon-dns-manager"></i> DNS Manager</a></li><li><a href="?module=domains"><i class="icon-domains"></i> Domains</a></li><li><a href="?module=parked_domains"><i class="icon-parked-domains"></i> Parked Domains</a></li><li><a href="?module=sub_domains"><i class="icon-sub-domains"></i> Sub Domains</a></li></ul></li><li><div class="heading">Mail <span class="open">+</span></div><ul><li><a href="?module=aliases"><i class="icon-aliases"></i> Aliases</a></li><li><a href="?module=distlists"><i class="icon-distlists"></i> Distribution Lists</a></li><li><a href="?module=forwarders"><i class="icon-forwarders"></i> Forwards</a></li><li><a href="?module=mailboxes"><i class="icon-mailboxes"></i> Mailboxes</a></li><li><a href="?module=webmail"><i class="icon-webmail"></i> WebMail</a></li></ul></li><li><div class="heading">Reseller <span class="open">+</span></div><ul><li><a href="?module=client_notices"><i class="icon-client-notices"></i> Client Notice Manager</a></li><li><a href="?module=manage_clients"><i class="icon-manage-clients"></i> Manage Clients</a></li><li><a href="?module=manage_groups"><i class="icon-manage-groups"></i> Manage Groups</a></li><li><a href="?module=packages"><i class="icon-packages"></i> Package Manager</a></li><li><a href="?module=theme_manager"><i class="icon-theme-manager"></i> Theme Manager</a></li><li><a href="?module=xbilling"><i class="icon-xbilling greyscale transparent"><img src="/modules/xbilling/assets/icon.png" height="16px" width="16px"></i> xBilling</a></li></ul></li><li><div class="heading">File Management <span class="open">+</span></div><ul><li><a href="?module=ELFileManager"><i class="icon-elfilemanager greyscale transparent"><img src="/modules/ELFileManager/assets/icon.png" height="16px" width="16px"></i> ELFileManager</a></li><li><a href="?module=ftp_management"><i class="icon-ftp-management"></i> FTP Accounts</a></li><li><a href="?module=pydio"><i class="icon-pydio greyscale transparent"><img src="/modules/pydio/assets/icon.png" height="16px" width="16px"></i> Pydio</a></li></ul></li>" -->
+		<# ui_tpl_shadowbar #><!-- outputs the shadowbar (only when shadowing) like: "<div class="zshadowbar" id="zshadowbar"><a href="./?returnsession=true"><button type="button" class="shadow-btn btn btn-danger">End shadow session and return to your session.</button></a></div>" -->
+		<# ui_tpl_username #><!-- outputs username from accound like: "zadmin" -->
+		<# ui_tpl_fullname #><!-- outputs full name from accound like: "name lastname" -->
+		<# ui_tpl_email #><!-- outputs email adress from accound like: "email@adress.com" -->
+		<# ui_tpl_packagename #><!-- outputs package name like: "largepack" -->
+		<# ui_tpl_usergroup #><!-- outputs usergroup name like: "Users" -->
+		<# ui_tpl_lastlogon #><!-- outputs date and time from last login like: "15:13 17th Mar 2017 CET" -->
+		<# ui_tpl_progbardisk #><!-- outputs progressbar from used harddisk like: "<div class="progress progress-striped"><div class="progress-bar progress-bar-success" style="width: 12%"></div></div>" -->
+		<# ui_tpl_usagediskspace #><!-- outputs usage from harddisk space like: "2.5 GB" -->
+		<# ui_tpl_quotadiskspace #><!-- outputs quota from harddisk space like: "15 GB" or "Unlimited" -->
+		<# ui_tpl_progbarbandwidth #><!-- outputs progressbar from used bandwidth like: "<div class="progress progress-striped"><div class="progress-bar progress-bar-success" style="width: 1%"></div></div>" -->
+		<# ui_tpl_usagebandwidth #><!-- outputs usage from bandwidth like: "2.5 GB" -->
+		<# ui_tpl_quotabandwidth #><!-- outputs quota from bandwidth like: "15 GB" or "Unlimited" -->
+		<# ui_tpl_useddomains #><!-- outputs number of used domains like: "4" -->
+		<# ui_tpl_totaldomains #><!-- outputs quota from domains like: "10" or endless sign "&#8734;" -->
+		<# ui_tpl_usedparkeddomains #><!-- outputs number of used parked domains like: "4" -->
+		<# ui_tpl_totalparkeddomains #><!-- outputs quota from parked domains like: "10" or endless sign "&#8734;" -->
+		<# ui_tpl_usedsubdomains #><!-- outputs number of used sub-domains like: "4" -->
+		<# ui_tpl_totalsubdomains #><!-- outputs quota from sub-domains like: "10" or endless sign "&#8734;" -->
+		<# ui_tpl_usedemail #><!-- outputs number of used Email Accounts like: "4" -->
+		<# ui_tpl_totalemail #><!-- outputs quota from Email Accounts like: "10" or endless sign "&#8734;" -->
+		<# ui_tpl_usedftp #><!-- outputs number of used FTP accounts like: "4" -->
+		<# ui_tpl_totalftp #><!-- outputs quota from FTP accounts like: "10" or endless sign "&#8734;" -->
+		<# ui_tpl_usedforwarders #><!-- outputs number of used Email Forwarders like: "4" -->
+		<# ui_tpl_totalforwarders #><!-- outputs quota from Email Forwarders like: "10" or endless sign "&#8734;" -->
+		<# ui_tpl_usedmysql #><!-- outputs number of used MySQL® databases like: "4" -->
+		<# ui_tpl_totalmysql #><!-- outputs quota from MySQL® databases like: "10" or endless sign "&#8734;" -->
+		<# ui_tpl_useddistlists #><!-- outputs number of used Distribution lists like: "4" -->
+		<# ui_tpl_totaldistlists #><!-- outputs quota from Distribution lists like: "10" or endless sign "&#8734;" -->
+		<# ui_tpl_clientipaddress #><!-- outputs client's ip address like: "8.8.4.4" -->
+		<# ui_tpl_serveripaddress #><!-- outputs server's ip address like: "8.8.8.8" -->
+		<# ui_tpl_serverosname #><!-- outputs name of used operating system on server like: "CentOS" --> <!-- tip: <# ui_tpl_assetfolderpath #>img/os_icons/<# ui_tpl_serverosname #>.png outputs icon from OS from template directory like: "etc/styles/BareBone/img/os_icons/CentOS.png" -->
+		<# ui_tpl_apacheversion #><!-- outputs apache version like: "2.2.15" -->
+		<# ui_tpl_phpversion #><!-- outputs php version like: "5.3.3" -->
+		<# ui_tpl_mysqlversion #><!-- outputs mysql version like: "5.1.73" -->
+		<# ui_tpl_sentoraversion #><!-- outputs sentora version like: "1.0.3" -->
+		<# ui_tpl_serveruptime #><!-- outputs server uptime like: "139 days, 16 hours, 47 minutes" -->
+		<# ui_tpl_clientdomains #><!-- outputs list of dmains, subdomains and parked domains like: "<div class="stats-row s-top">    <div class="stats-column"><strong>Domains</strong></div>    <div class="stats-column"><strong>Status</strong></div>    <div class="stats-column"><a href="?module=domains">(Add New Domain)</a></div></div><! --end stats-row-- ><div class="stats-row">  <div class="stats-column"><a href="http://domain.com" target="_blank">domain.com</a></div><div class="stats-column"><span class="label label-success">Active</span></div></div><!--end stats-row--><div class="stats-row">    <div class="stats-column"><a href="?module=domains">(View all Domains)</a></div></div><!--end stats-row--><div class="stats-row">    <div class="stats-column"><strong>Sub-Domains</strong></div>    <div class="stats-column"><strong>Status</strong></div>    <div class="stats-column"><a href="?module=sub_domains">(Add New Sub-Domain)</a></div></div><!--end stats-row--><div class="stats-row">  <div class="stats-column"><a href="http://sub.domain.com" target="_blank">sub.domain.com</a></div><div class="stats-column"><span class="label label-success">Active</span></div></div><!--end stats-row--><div class="stats-row">    <div class="stats-column"><a href="?module=sub_domains">(View all Sub-Domains)</a></div></div><!--end stats-row--><div class="stats-row">    <div class="stats-column"><strong>Parked Domains</strong></div></div><!--end stats-row--><div class="stats-row">    <div class="stats-column"><span class="Side_Info_None">No Parked Domains Found</span></div>    <div class="stats-column"><a href="?module=parked_domains">Add New Parked Domain</a></div></div><!--end stats-row-->" -->
+		<# ui_tpl_notice #><!-- outputs notice if used like: "<div class="alert alert-block alert-info notice-manager-alert hidden"><button type="button" class="close" data-dismiss="alert">×</button><h4>Notice:</h4><p>example</p></div>" -->
+		<# ui_tpl_modulelist2column #><!-- outputs module list if no module is used -->
+		<# ui_tpl_module #><!-- outputs module if module is used -->
+		<# ui_tpl_year #><!-- outputs year like: "2017" -->
+
+		<!-- Translatable words -->
+		<: Account Info :><!-- translates "Account Info" to client chosen language -->
+		<: Account Information :><!-- translates "Account Information" to client chosen language -->
+        <: Account Usage :><!-- translates "Account Usage" to client chosen language -->
+        <: Server Information :><!-- translates "Server Information" to client chosen language -->
+        <: Domain Information :><!-- translates "Domain Information" to client chosen language -->
+		<: Username :><!-- translates "Username" to client chosen language -->
+		<: Full name :><!-- translates "Full name" to client chosen language -->
+		<: Email Address :><!-- translates "Email Address" to client chosen language -->
+		<: Package name :><!-- translates "Package name" to client chosen language -->
+		<: Account type :><!-- translates "Account type" to client chosen language -->
+		<: Last Logon :><!-- translates "Last Logon" to client chosen language -->
+		<: Disk Quota :><!-- translates "" to client chosen language -->
+		<: Bandwidth Quota :><!-- translates "Bandwidth Quota" to client chosen language -->
+		<: Used :><!-- translates "Used" to client chosen language -->
+		<: Max :><!-- translates "Max" to client chosen language -->
+        <: Domains :><!-- translates "Domains" to client chosen language -->
+		<: Parked domains :><!-- translates "Parked domains" to client chosen language -->
+		<: Sub-domains :><!-- translates "Sub-domains" to client chosen language -->
+		<: Email Accounts :><!-- translates "Email Accounts" to client chosen language -->
+		<: FTP accounts :><!-- translates "Email Forwarders" to client chosen language -->
+		<: Email Forwarders :><!-- translates "" to client chosen language -->
+		<: MySQL&reg; databases :><!-- translates "MySQL® databases" to client chosen language -->
+		<: Distribution lists :><!-- translates "Distribution lists" to client chosen language -->
+		<: Your IP :><!-- translates "Your IP" to client chosen language -->
+		<: Server IP :><!-- translates "Server IP" to client chosen language -->
+		<: Server OS :><!-- translates "Server OS" to client chosen language -->
+		<: PHP Version :><!-- translates "PHP Version" to client chosen language -->
+		<: MySQL Version :><!-- translates "MySQL Version" to client chosen language -->
+		<: Sentora Version :><!-- translates "Sentora Version" to client chosen language -->
+		<: Server uptime :><!-- translates "Server uptime" to client chosen language -->
+		<: Apache Version :><!-- translates "Apache Version" to client chosen language -->
+
+
+        <!-- Javascript
+        ================================================== -->
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-transition.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-alert.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-modal.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-dropdown.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-scrollspy.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-tab.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-tooltip.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-popover.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-button.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-collapse.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/bootstrap-carousel.js"></script>
+        <script src="<# ui_tpl_assetfolderpath #>js/typeahead.min.js"></script>
+
+        <!-- Modulelist for Typeahead -->
+        <script>
+                var moduleJsonData = <# ui_tpl_modulelistjson #>;
+                Sentora.modules.typeAhead(moduleJsonData);
+        </script>
+
+        <# ui_controllerdebug #>
+
+    </body>
+</html>
